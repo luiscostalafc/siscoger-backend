@@ -17,7 +17,7 @@ import { SindicanciaModule } from './modules/sindicancia/sindicancia.module';
       entities: [
         resolve(__dirname, 'modules', '**', 'entity', '*.entity.{ts,js}'),
       ],
-      synchronize: process.env.DATABASE_SYNC === 'true',
+      synchronize: process.env.DB_SYNC === 'true',
     }),
     SindicanciaModule
   ],
