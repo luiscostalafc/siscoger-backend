@@ -14,12 +14,23 @@ import { SindicanciaModule } from './modules/sindicancia/sindicancia.module';
       username: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
+      logging: true,
       entities: [
         resolve(__dirname, 'modules', '**', 'entity', '*.entity.{ts,js}'),
       ],
+      migrations: [
+        resolve(__dirname, 'modules', '**', 'migrations', '*.{ts,js}'),
+      ],
+      // seeds: [
+      //   resolve(__dirname, 'modules', '**', 'seeds', '*.{ts,js}'),
+      // ],
+      // factories: [
+      //   resolve(__dirname, 'modules', '**', 'factory', '*.factory.{ts,js}'),
+      // ],
       synchronize: process.env.DB_SYNC === 'true',
     }),
     SindicanciaModule
   ],
 })
 export class AppModule {}
+
