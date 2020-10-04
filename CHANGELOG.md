@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.3.0...v0.4.0) (2020-10-04)
+
+
+### Features
+
+* add migrations, factories to sindicancia ([d4c943f](https://github.com/EmersonBraun/siscoger-backend-v2/commit/d4c943fdc0e94772ef3c437eddad087308ae02b3))
+
 ## [0.3.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.2.0...v0.3.0) (2020-10-02)
 
 ## [0.2.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.1.0...v0.2.0) (2020-10-02)
