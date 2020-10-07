@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.4.0...v0.5.0) (2020-10-07)
+
+
+### Features
+
+* add function to create sindicancias ([b204f35](https://github.com/EmersonBraun/siscoger-backend-v2/commit/b204f35b6a7f3adac922965fc989ba97983ed029))
+
 ## [0.4.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.3.0...v0.4.0) (2020-10-04)
 
 
