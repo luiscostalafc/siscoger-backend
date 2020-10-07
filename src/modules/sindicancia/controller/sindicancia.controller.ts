@@ -17,6 +17,7 @@ import {
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
+import { RefYearPipe } from 'src/common/pipes/RefYear'
 
 import { ErrorResponse } from '../../../common/responses/error';
 import { Response } from '../responses/response';
@@ -26,7 +27,7 @@ import { Sindicancia } from '../entity/sindicancia.entity';
 import { SindicanciaService } from '../service/sindicancia.service';
 
 @ApiTags('Sindicancia')
-@Controller('Sindicancia')
+@Controller('sindicancias')
 export class SindicanciaController {
   constructor(private service: SindicanciaService) {}
 
@@ -42,7 +43,7 @@ export class SindicanciaController {
   @HttpCode(201)
   @ApiOperation({ summary: 'Create a new Sindicancia' })
   @ApiCreatedResponse({ type: Response, description: 'Created Sindicancia' })
-  @ApiBadRequestResponse({ type: ErrorResponse, description: 'Bad Request' })
+  @ApiBadRequestResponse({ type: ErrorResponse, description: 'Bad Request', })
   async create(@Body() data: CreateDto): Promise<Sindicancia> {
     return await this.service.create(data);
   }

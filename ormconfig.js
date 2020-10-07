@@ -6,10 +6,8 @@ module.exports = {
   password: process.env.DB_PASSWORD,
   database: "siscoger",
   logging: true,
-  synchronize: true,
   entities: [
-    "dist/src/entity/*.{.ts,.js}", 
-    "dist/src/modules/**/entity/*.{.ts,.js}"
+    "dist/src/modules/**/entity/*.entity.{.ts,.js}"
   ],
   migrations: [
     "dist/src/modules/**/migrations/*.js" 

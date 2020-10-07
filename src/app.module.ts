@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { Connection } from 'typeorm';
 import { resolve } from 'path';
 import { SindicanciaModule } from './modules/sindicancia/sindicancia.module';
 
@@ -14,7 +15,15 @@ import { SindicanciaModule } from './modules/sindicancia/sindicancia.module';
       username: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
-      logging: true,
+      logging: [
+        'error',
+        // 'info',
+        'log',
+        'migration',
+        // 'query',
+        'schema',
+        'warn'
+      ],
       entities: [
         resolve(__dirname, 'modules', '**', 'entity', '*.entity.{ts,js}'),
       ],
@@ -32,5 +41,7 @@ import { SindicanciaModule } from './modules/sindicancia/sindicancia.module';
     SindicanciaModule
   ],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(private connection: Connection) {}
+}
 

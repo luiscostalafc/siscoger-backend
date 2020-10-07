@@ -12,12 +12,34 @@ export class SindicanciaService {
     private repository: Repository<Sindicancia>,
   ) {}
 
+  getNextRefYear(data: CreateDto): number {
+    return data.sjd_ref_ano || new Date().getFullYear()
+  }
+
+  async getNextRef(data: CreateDto): Promise<number> {
+    const year = this.getNextRefYear(data)
+    const registry = await this.repository
+    .createQueryBuilder()
+    .select("MAX(sjd_ref)", "max")
+    .where('sjd_ref_ano = :year', { year })
+    .getRawOne()
+    console.log(registry)
+    // .findOne(
+    //   { sjdRefAno: year }
+    // )
+    return registry?.max ? ++registry.max : 1
+
+  }
+
   async findAll(): Promise<Sindicancia[]> {
     return await this.repository.find();
   }
 
   async create(data: CreateDto): Promise<Sindicancia> {
     const registry = this.repository.create(data);
+    registry.sjdRefAno = this.getNextRefYear(data)
+    registry.sjdRef = await this.getNextRef(data)
+    console.log(registry)
     return await this.repository.save(registry);
   }
 

@@ -4,131 +4,145 @@ import {
   IsDate,
   IsNotEmpty,
   IsNumber,
+  IsOptional,
   IsPositive,
   IsString,
+  MinLength,
 } from 'class-validator';
 
 export class CreateDto {
+  @IsOptional()
   @IsNumber()
   @IsPositive()
-  @IsNotEmpty()
   @ApiProperty()
-  idAndamentocoger: number
+  id_andamentocoger: number
 
+  @IsOptional()
   @IsNumber()
   @IsPositive()
-  @IsNotEmpty()
   @ApiProperty()
-  idAndamento: number
+  id_andamento: number
 
+  @IsOptional()
   @IsNumber()
   @IsPositive()
-  @IsNotEmpty()
   @ApiProperty()
-  sjdRef: number
+  sjd_ref?: number
 
+  @IsOptional()
   @IsNumber()
   @IsPositive()
-  @IsNotEmpty()
   @ApiProperty()
-  sjdRefAno: number
+  sjd_ref_ano?: number
 
-  @IsString()
-  @IsNotEmpty()
-  @ApiProperty()
-  fatoData: string
-
+  @IsOptional()
   @IsDate()
   @ApiProperty()
-  aberturaData: Date
+  fato_data?: Date
+
+  @IsOptional()
+  @IsDate()
+  @ApiProperty()
+  abertura_data?: Date
 
   @IsString()
   @IsNotEmpty()
+  @MinLength(100)
   @ApiProperty()
-  sinteseTxt: string
+  sintese_txt: string
 
   @IsString()
   @IsNotEmpty()
   @ApiProperty()
   cdopm: string
 
+  @IsOptional()
   @IsString()
-  @IsNotEmpty()
   @ApiProperty()
-  docTipo: string
+  doc_tipo?: string
+
+  @IsOptional()
+  @IsString()
+  @ApiProperty()
+  doc_numero?: string
+
+  @IsOptional()
+  @IsString()
+  @ApiProperty()
+  doc_origem_txt: string
 
   @IsString()
   @IsNotEmpty()
   @ApiProperty()
-  docNumero: string
+  portaria_numero: string
 
-  @IsString()
+  // @IsDate()
   @IsNotEmpty()
   @ApiProperty()
-  docOrigemTxt: string
+  portaria_data: Date
 
+  @IsOptional()
   @IsString()
-  @IsNotEmpty()
   @ApiProperty()
-  portariaNumero: string
+  sol_cmt_file?: string
 
+  @IsOptional()
   @IsDate()
   @ApiProperty()
-  portariaData: Date
+  sol_cmt_data?: Date
 
+  @IsOptional()
   @IsString()
-  @IsNotEmpty()
   @ApiProperty()
-  solCmtFile: string
+  sol_cmtgeral_file?: string
 
+  @IsOptional()
   @IsDate()
   @ApiProperty()
-  solCmtData: Date
+  sol_cmtgeral_data?: Date
 
+  @IsOptional()
   @IsString()
-  @IsNotEmpty()
   @ApiProperty()
-  solCmtgeralFile: string
+  opm_meta4?: string
 
+  @IsOptional()
+  @IsString()
+  @ApiProperty()
+  relatorio_file?: string
+
+  @IsOptional()
   @IsDate()
   @ApiProperty()
-  solCmtgeralData: Date
+  relatorio_data?: Date
 
-  @IsString()
-  @IsNotEmpty()
-  @ApiProperty()
-  opmMeta4: string
-
-  @IsString()
-  @IsNotEmpty()
-  @ApiProperty()
-  relatorioFile: string
-
-  @IsDate()
-  @ApiProperty()
-  relatorioData: Date
-
+  @IsOptional()
   @IsBoolean()
   @ApiProperty()
-  prioridade: boolean
+  prioridade?: boolean
 
+  @IsOptional()
   @IsString()
-  @IsNotEmpty()
   @ApiProperty()
-  motivoAbertura: string
+  motivo_cancelamento?: string
 
+  @IsOptional()
   @IsString()
-  @IsNotEmpty()
   @ApiProperty()
-  motivoOutros: string
+  motivo_abertura?: string
 
+  @IsOptional()
+  @IsString()
+  @ApiProperty()
+  motivo_outros?: string
+
+  @IsOptional()
   @IsBoolean()
   @ApiProperty()
-  prorogacao: boolean
+  prorogacao?: boolean
 
+  @IsOptional()
   @IsNumber()
-  @IsPositive()
-  @IsNotEmpty()
   @ApiProperty()
-  prorogacaoDias: number
+  prorogacao_dias?: number
 }

@@ -8,69 +8,69 @@ import {
 
 } from 'typeorm';
 
-@Entity()
+@Entity('sindicancias')
 export class Sindicancia {
-  @PrimaryGeneratedColumn({ type: "int" })
+  @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ name: 'id_andamentocoger', type: "int" })
+  @Column({ name: 'id_andamentocoger', type: "int", nullable: true })
   idAndamentocoger: number
 
-  @Column({ name: 'id_andamentocoger', type: "int" })
+  @Column({ name: 'id_andamento', type: "int", nullable: true })
   idAndamento: number
 
   @Column({ name: 'sjd_ref', type: "int" })
   sjdRef: number
 
-  @Column({ name: 'sjd_ref', type: "int" })
+  @Column({ name: 'sjd_ref_ano', type: "int" })
   sjdRefAno: number
 
-  @Column({ name: 'fato_data' })
+  @Column({ name: 'fato_data', nullable: true })
   fatoData: Date
 
-  @Column({ name: 'abertura_data' })
+  @Column({ name: 'abertura_data', nullable: true })
   aberturaData: Date
 
-  @Column({ name: 'sintese_txt' })
-  sinteseTxt: string
+  @Column()
+  sintese_txt: string
 
   @Column()
   cdopm: string
 
-  @Column({ name: 'doc_tipo' })
-  docTipo: string
+  @Column({ nullable: true })
+  doc_tipo: string
 
-  @Column({ name: 'doc_numero' })
+  @Column({ nullable: true })
   docNumero: string
 
-  @Column({ name: 'doc_origem_txt' })
+  @Column({ nullable: true })
   docOrigemTxt: string
 
-  @Column({ name: 'portaria_numero' })
+  @Column({ nullable: true })
   portariaNumero: string
 
-  @Column({ name: 'portaria_data' })
-  portariaData: Date
+  @Column()
+  portaria_data: Date
 
-  @Column({ name: 'sol_cmt_file' })
+  @Column({ nullable: true })
   solCmtFile: string
 
-  @Column({ name: 'sol_cmt_data' })
+  @Column({ nullable: true })
   solCmtData: Date
 
-  @Column({ name: 'sol_cmtgeral_file' })
+  @Column({ nullable: true })
   solCmtgeralFile: string
 
-  @Column({ name: 'sol_cmtgeral_data' })
+  @Column({ nullable: true })
   solCmtgeralData: Date
 
-  @Column({ name: 'opm_meta4' })
+  @Column({ nullable: true })
   opmMeta4: string
 
-  @Column({ name: 'relatorio_file' })
+  @Column({ nullable: true })
   relatorioFile: string
 
-  @Column({ name: 'relatorio_data' })
+  @Column({ nullable: true })
   relatorioData: Date
 
   @Column()
@@ -85,15 +85,18 @@ export class Sindicancia {
   @DeleteDateColumn({ name: 'deleted_at' })
   deletedAt: Date
 
-  @Column({ name: 'motivo_abertura' })
+  @Column({ nullable: true })
   motivoAbertura: string
 
-  @Column({ name: 'motivo_outros' })
+  @Column({ nullable: true })
+  motivoCancelamento: string
+
+  @Column({ nullable: true })
   motivoOutros: string
 
-  @Column()
+  @Column({ nullable: true })
   prorogacao: boolean
 
-  @Column({ name: 'prorogacao_dias' })
+  @Column({ nullable: true })
   prorogacaoDias: number
 }
