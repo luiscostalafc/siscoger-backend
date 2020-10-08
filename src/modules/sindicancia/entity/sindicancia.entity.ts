@@ -13,23 +13,23 @@ export class Sindicancia {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ name: 'id_andamentocoger', type: "int", nullable: true })
-  idAndamentocoger: number
+  @Column({ type: "int", nullable: true })
+  id_andamentocoger: number
 
-  @Column({ name: 'id_andamento', type: "int", nullable: true })
-  idAndamento: number
+  @Column({ type: "int", nullable: true })
+  id_andamento: number
 
-  @Column({ name: 'sjd_ref', type: "int" })
-  sjdRef: number
+  @Column({ type: "int" })
+  sjd_ref: number
 
-  @Column({ name: 'sjd_ref_ano', type: "int" })
-  sjdRefAno: number
+  @Column({ type: "int" })
+  sjd_ref_ano: number
 
-  @Column({ name: 'fato_data', nullable: true })
-  fatoData: Date
+  @Column({ nullable: true })
+  fato_data: Date
 
-  @Column({ name: 'abertura_data', nullable: true })
-  aberturaData: Date
+  @Column({ nullable: true })
+  abertura_data: Date
 
   @Column()
   sintese_txt: string
@@ -41,37 +41,37 @@ export class Sindicancia {
   doc_tipo: string
 
   @Column({ nullable: true })
-  docNumero: string
+  doc_numero: string
 
   @Column({ nullable: true })
-  docOrigemTxt: string
+  doc_origem_txt: string
 
   @Column({ nullable: true })
-  portariaNumero: string
+  portaria_numero: string
 
   @Column()
   portaria_data: Date
 
   @Column({ nullable: true })
-  solCmtFile: string
+  sol_cmt_file: string
 
   @Column({ nullable: true })
-  solCmtData: Date
+  sol_cmt_data: Date
 
   @Column({ nullable: true })
-  solCmtgeralFile: string
+  sol_cmtgeral_file: string
 
   @Column({ nullable: true })
-  solCmtgeralData: Date
+  sol_cmtgeral_data: Date
 
   @Column({ nullable: true })
-  opmMeta4: string
+  opm_meta4: string
 
   @Column({ nullable: true })
-  relatorioFile: string
+  relatorio_file: string
 
   @Column({ nullable: true })
-  relatorioData: Date
+  relatorio_data: Date
 
   @Column()
   prioridade: boolean
@@ -86,17 +86,17 @@ export class Sindicancia {
   deletedAt: Date
 
   @Column({ nullable: true })
-  motivoAbertura: string
+  motivo_abertura: string
 
   @Column({ nullable: true })
-  motivoCancelamento: string
+  motivo_cancelamento: string
 
   @Column({ nullable: true })
-  motivoOutros: string
+  motivo_outros: string
 
   @Column({ nullable: true })
   prorogacao: boolean
 
   @Column({ nullable: true })
-  prorogacaoDias: number
+  prorogacao_dias: number
 }

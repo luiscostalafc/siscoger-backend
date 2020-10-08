@@ -7,7 +7,7 @@ module.exports = {
   database: "siscoger",
   logging: true,
   entities: [
-    "dist/src/modules/**/entity/*.entity.{.ts,.js}"
+    "dist/src/modules/**/entity/*.entity.js"
   ],
   migrations: [
     "dist/src/modules/**/migrations/*.js" 

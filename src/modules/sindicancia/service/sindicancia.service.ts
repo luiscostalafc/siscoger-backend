@@ -24,9 +24,6 @@ export class SindicanciaService {
     .where('sjd_ref_ano = :year', { year })
     .getRawOne()
     console.log(registry)
-    // .findOne(
-    //   { sjdRefAno: year }
-    // )
     return registry?.max ? ++registry.max : 1
 
   }
@@ -37,8 +34,8 @@ export class SindicanciaService {
 
   async create(data: CreateDto): Promise<Sindicancia> {
     const registry = this.repository.create(data);
-    registry.sjdRefAno = this.getNextRefYear(data)
-    registry.sjdRef = await this.getNextRef(data)
+    registry.sjd_ref_ano = this.getNextRefYear(data)
+    registry.sjd_ref = await this.getNextRef(data)
     console.log(registry)
     return await this.repository.save(registry);
   }
