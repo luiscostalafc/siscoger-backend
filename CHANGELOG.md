@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.6.0...v0.7.0) (2020-10-12)
+
+
+### Features
+
+* add ligacao module ([e759b2e](https://github.com/EmersonBraun/siscoger-backend-v2/commit/e759b2e76807c28bc8b13748eade16ce417d0176))
+
 ## [0.6.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.5.0...v0.6.0) (2020-10-08)
 
 ## [0.5.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.4.0...v0.5.0) (2020-10-07)
