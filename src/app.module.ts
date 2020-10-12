@@ -7,6 +7,7 @@ import { typeOrmOptions } from 'src/config'
 import { SindicanciaModule } from './modules/sindicancia/sindicancia.module';
 import { LigacaoModule } from './modules/ligacao/ligacao.module';
 import { MovimentoModule } from './modules/movimento/movimento.module';
+import { OfendidoModule } from './modules/ofendido/ofendido.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { MovimentoModule } from './modules/movimento/movimento.module';
     SindicanciaModule,
     LigacaoModule,
     MovimentoModule,
+    OfendidoModule,
   ],
 })
 export class AppModule {
