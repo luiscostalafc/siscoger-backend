@@ -1,12 +1,12 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { CreateDto, UpdateDto } from '../dtos';
+import { CreateSindicanciaDto, UpdateSindicanciaDto } from '../dtos';
 import { fakerRegistry } from '../factory/sindicancia.factory';
 import { SindicanciaService } from '../service/sindicancia.service';
 import { SindicanciaController } from './sindicancia.controller';
 
 describe('SindicanciaController', () => {
   let controller: SindicanciaController;
-  let mockRegistry: CreateDto;
+  let mockRegistry: CreateSindicanciaDto;
 
   const mockService = {
     create: jest.fn(),
@@ -42,7 +42,7 @@ describe('SindicanciaController', () => {
     it('should create a sindicancia and return it', async () => {
       mockService.create.mockReturnValue(mockRegistry);
 
-      const sindicancia: CreateDto = mockRegistry;
+      const sindicancia: CreateSindicanciaDto = mockRegistry;
 
       const createdSindicancia = await controller.create(sindicancia);
 
@@ -78,7 +78,7 @@ describe('SindicanciaController', () => {
 
   describe('when update a sindicancia', () => {
     it('should update a existing sindicancia and return it', async () => {
-      const sindicanciaUpdate: UpdateDto = mockRegistry;
+      const sindicanciaUpdate: UpdateSindicanciaDto = mockRegistry;
       sindicanciaUpdate.sintese_txt = 'Update sindicancia '
 
       mockService.update.mockReturnValue({

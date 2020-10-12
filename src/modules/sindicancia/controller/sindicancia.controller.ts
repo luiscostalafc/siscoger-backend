@@ -17,10 +17,10 @@ import {
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
+import { ErrorResponse } from '../../../common/responses';
 
-import { ErrorResponse } from '../../../common/responses/error';
-import { CreateDto } from '../dtos/create.dto';
-import { UpdateDto } from '../dtos/update.dto';
+import { CreateSindicanciaDto } from '../dtos/create.dto';
+import { UpdateSindicanciaDto } from '../dtos/update.dto';
 import { Sindicancia } from '../entity/sindicancia.entity';
 import { SindicanciaService } from '../service/sindicancia.service';
 
@@ -32,7 +32,7 @@ export class SindicanciaController {
   @Get()
   @HttpCode(200)
   @ApiOperation({ summary: 'Search all Sindicancia' })
-  @ApiOkResponse({ type: [UpdateDto], description: 'The found Sindicancia' })
+  @ApiOkResponse({ type: [CreateSindicanciaDto], description: 'The found Sindicancia' })
   async findAll(): Promise<Sindicancia[]> {
     return await this.service.findAll();
   }
@@ -40,16 +40,16 @@ export class SindicanciaController {
   @Post()
   @HttpCode(201)
   @ApiOperation({ summary: 'Create a new Sindicancia' })
-  @ApiCreatedResponse({ type: UpdateDto, description: 'Created Sindicancia' })
+  @ApiCreatedResponse({ type: UpdateSindicanciaDto, description: 'Created Sindicancia' })
   @ApiBadRequestResponse({ type: ErrorResponse, description: 'Bad Request', })
-  async create(@Body() data: CreateDto): Promise<Sindicancia> {
+  async create(@Body() data: CreateSindicanciaDto): Promise<Sindicancia> {
     return await this.service.create(data);
   }
 
   @Get(':id')
   @HttpCode(200)
   @ApiOperation({ summary: 'Search a Sindicancia by id' })
-  @ApiOkResponse({ type: UpdateDto, description: 'The found Sindicancia' })
+  @ApiOkResponse({ type: UpdateSindicanciaDto, description: 'The found Sindicancia' })
   @ApiNotFoundResponse({ type: ErrorResponse, description: 'Not Found' })
   async findById(@Param('id') id: string): Promise<Sindicancia> {
     return await this.service.findById(id);
@@ -58,11 +58,11 @@ export class SindicanciaController {
   @Put(':id')
   @HttpCode(200)
   @ApiOperation({ summary: 'Update a Sindicancia' })
-  @ApiOkResponse({ type: UpdateDto, description: 'Updated Sindicancia' })
+  @ApiOkResponse({ type: UpdateSindicanciaDto, description: 'Updated Sindicancia' })
   @ApiNotFoundResponse({ type: ErrorResponse, description: 'Not Found' })
   async update(
     @Param('id') id: string,
-    @Body() data: UpdateDto,
+    @Body() data: UpdateSindicanciaDto,
   ): Promise<Sindicancia> {
     return this.service.update(id, data);
   }

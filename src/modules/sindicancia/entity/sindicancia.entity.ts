@@ -86,10 +86,10 @@ export class Sindicancia {
   deletedAt: Date
 
   @Column({ nullable: true })
-  motivo_abertura: string
+  motivo_cancelamento: string
 
   @Column({ nullable: true })
-  motivo_cancelamento: string
+  motivo_abertura: string
 
   @Column({ nullable: true })
   motivo_outros: string
@@ -99,4 +99,7 @@ export class Sindicancia {
 
   @Column({ nullable: true })
   prorogacao_dias: number
+
+  @Column({ nullable: true })
+  inserido: boolean
 }

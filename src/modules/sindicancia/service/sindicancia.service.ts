@@ -1,8 +1,8 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { CreateDto } from '../dtos/create.dto';
-import { UpdateDto } from '../dtos/update.dto';
+import { CreateSindicanciaDto } from '../dtos/create.dto';
+import { UpdateSindicanciaDto } from '../dtos/update.dto';
 import { Sindicancia } from '../entity/sindicancia.entity';
 
 @Injectable()
@@ -12,11 +12,11 @@ export class SindicanciaService {
     private repository: Repository<Sindicancia>,
   ) {}
 
-  getNextRefYear(data: CreateDto): number {
+  getNextRefYear(data: CreateSindicanciaDto): number {
     return data.sjd_ref_ano || new Date().getFullYear()
   }
 
-  async getNextRef(data: CreateDto): Promise<number> {
+  async getNextRef(data: CreateSindicanciaDto): Promise<number> {
     const year = this.getNextRefYear(data)
     const registry = await this.repository
     .createQueryBuilder()
@@ -32,7 +32,7 @@ export class SindicanciaService {
     return await this.repository.find();
   }
 
-  async create(data: CreateDto): Promise<Sindicancia> {
+  async create(data: CreateSindicanciaDto): Promise<Sindicancia> {
     const registry = this.repository.create(data);
     registry.sjd_ref_ano = this.getNextRefYear(data)
     registry.sjd_ref = await this.getNextRef(data)
@@ -50,7 +50,7 @@ export class SindicanciaService {
     return registry;
   }
 
-  async update(id: string, data: UpdateDto): Promise<Sindicancia> {
+  async update(id: string, data: UpdateSindicanciaDto): Promise<Sindicancia> {
     const registry = await this.findById(id);
     await this.repository.update(id, { ...data });
 

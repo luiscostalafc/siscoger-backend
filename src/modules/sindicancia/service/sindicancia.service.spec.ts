@@ -1,14 +1,14 @@
 import { NotFoundException } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import { getRepositoryToken } from '@nestjs/typeorm';
-import { CreateDto, UpdateDto } from '../dtos';
+import { CreateSindicanciaDto, UpdateSindicanciaDto } from '../dtos';
 import { fakerRegistry } from '../factory/sindicancia.factory';
 import { Sindicancia } from '../entity/sindicancia.entity';
 import { SindicanciaService } from './sindicancia.service';
 
 describe('SindicanciaService', () => {
   let service: SindicanciaService;
-  let mockRegistry: CreateDto;
+  let mockRegistry: CreateSindicanciaDto;
 
   const mockRepository = {
     create: jest.fn(),
@@ -50,7 +50,7 @@ describe('SindicanciaService', () => {
   //     mockRepository.create.mockReturnValueOnce(mockRegistry);
   //     mockRepository.save.mockReturnValueOnce(mockRegistry);
 
-  //     const sindicancia: CreateDto = mockRegistry;
+  //     const sindicancia: CreateSindicanciaDto = mockRegistry;
 
   //     const savedsindicancia = await service.create(sindicancia);
 
@@ -97,7 +97,7 @@ describe('SindicanciaService', () => {
 
   describe('when update a sindicancia', () => {
     it('should update a existing sindicancia', async () => {
-      const sindicanciaUpdate: UpdateDto = mockRegistry;
+      const sindicanciaUpdate: UpdateSindicanciaDto = mockRegistry;
       sindicanciaUpdate.sintese_txt = 'Update sindicancia '
 
       mockRepository.findOne.mockReturnValue(mockRegistry);

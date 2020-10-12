@@ -1,7 +1,7 @@
 import * as Faker from 'faker'
 import { define } from 'typeorm-seeding'
 import { Sindicancia } from '../entity/sindicancia.entity';
-import { CreateDto } from '../dtos/create.dto';
+import { CreateSindicanciaDto } from '../dtos/create.dto';
 
 define(Sindicancia, (faker: typeof Faker) => {
   const factory = new Sindicancia()
@@ -32,7 +32,7 @@ define(Sindicancia, (faker: typeof Faker) => {
   return factory
 })
 
-export const fakerRegistry = ():CreateDto => {
+export const fakerRegistry = ():CreateSindicanciaDto => {
   const faker = Faker
   return {
     abertura_data: faker.date.past(1),

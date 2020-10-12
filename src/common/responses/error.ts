@@ -10,4 +10,6 @@ export class ErrorResponse {
   @ApiProperty()
   error: string;
 
+  @ApiProperty()
+  data: [];
 }

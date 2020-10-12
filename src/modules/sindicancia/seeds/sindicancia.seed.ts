@@ -1,5 +1,4 @@
 import { Sindicancia } from 'src/modules/sindicancia/entity/sindicancia.entity';
-// import { Connection } from 'typeorm'
 import { Seeder, Factory } from 'typeorm-seeding'
 
 export default class CreateSindicancias implements Seeder {

@@ -10,7 +10,7 @@ import {
   MinLength,
 } from 'class-validator';
 
-export class CreateDto {
+export class CreateSindicanciaDto {
   @IsOptional()
   @IsNumber()
   @IsPositive()
