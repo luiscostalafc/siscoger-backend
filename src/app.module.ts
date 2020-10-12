@@ -8,6 +8,7 @@ import { SindicanciaModule } from './modules/sindicancia/sindicancia.module';
 import { LigacaoModule } from './modules/ligacao/ligacao.module';
 import { MovimentoModule } from './modules/movimento/movimento.module';
 import { OfendidoModule } from './modules/ofendido/ofendido.module';
+import { SobrestamentoModule } from './modules/sobrestamento/sobrestamento.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { OfendidoModule } from './modules/ofendido/ofendido.module';
     LigacaoModule,
     MovimentoModule,
     OfendidoModule,
+    SobrestamentoModule,
   ],
 })
 export class AppModule {
