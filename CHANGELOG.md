@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.9.0...v0.10.0) (2020-10-12)
+
+
+### Features
+
+* add sobrestamento module ([3790caf](https://github.com/EmersonBraun/siscoger-backend-v2/commit/3790cafae2091eb8a37ce7719560b0a2ad5c86da))
+
 ## [0.9.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.8.0...v0.9.0) (2020-10-12)
 
 
