@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.7.0...v0.8.0) (2020-10-12)
+
+
+### Features
+
+* add movimento module ([c531556](https://github.com/EmersonBraun/siscoger-backend-v2/commit/c531556cfdcc32d16935b21361ee35abfadef5e2))
+
 ## [0.7.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.6.0...v0.7.0) (2020-10-12)
 
 
