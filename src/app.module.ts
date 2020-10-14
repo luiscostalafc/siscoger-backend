@@ -9,6 +9,7 @@ import { LigacaoModule } from './modules/ligacao/ligacao.module';
 import { MovimentoModule } from './modules/movimento/movimento.module';
 import { OfendidoModule } from './modules/ofendido/ofendido.module';
 import { SobrestamentoModule } from './modules/sobrestamento/sobrestamento.module';
+import { EnvolvidoModule } from './modules/envolvido/envolvido.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { SobrestamentoModule } from './modules/sobrestamento/sobrestamento.modul
     MovimentoModule,
     OfendidoModule,
     SobrestamentoModule,
+    EnvolvidoModule,
   ],
 })
 export class AppModule {

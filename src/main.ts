@@ -1,27 +1,18 @@
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
-import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './app.module';
-import helmet from 'helmet';
+import { setupDocumentation } from './common/documentation';
 
-import { version } from './../package.json'
+import helmet from 'helmet';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
 
   app.use(helmet())
-  
   app.useGlobalPipes(new ValidationPipe());
+  void setupDocumentation(app)
 
-  const options = new DocumentBuilder()
-    .setTitle('SISCOGER API')
-    .setDescription('SISCOGER API documentation')
-    .setVersion(version)
-    .build();
-
-  const document = SwaggerModule.createDocument(app, options);
-  SwaggerModule.setup('documentation', app, document);
-
-  await app.listen(8888);
+  await app.listen(process.env.APP_PORT);
 }
+
 bootstrap();
