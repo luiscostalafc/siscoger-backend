@@ -1,6 +1,30 @@
 version: "3"
 
 services:
+  api:
+    container_name: siscoger_api
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - NODE_ENV=${NODE_ENV}
+    environment:
+      - PORT=${APP_PORT}
+      - DB_HOST=postgres
+      - DB_PORT=${DB_PORT}
+      - DB_USER=${DB_USER}
+      - DB_PW=${DB_PASSWORD}      
+    ports:
+      - 3000:3000
+    depends_on:
+      - postgres
+    links:
+      - postgres:postgres
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    command: npm run dev
+
   postgres:
     container_name: siscoger_postgres
     image: "postgres:9.4"
