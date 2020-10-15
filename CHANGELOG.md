@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.16.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.15.0...v0.16.0) (2020-10-15)
+
+
+### Features
+
+* add module gradacao ([28d357d](https://github.com/EmersonBraun/siscoger-backend-v2/commit/28d357dd3f6bbcbf915df6a61a08d07de4f92c34))
+
 ## [0.15.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.14.0...v0.15.0) (2020-10-15)
 
 
