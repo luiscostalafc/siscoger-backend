@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.17.1](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.17.0...v0.17.1) (2020-10-15)
+
+
+### Bug Fixes
+
+* solve case routes ([86c1b88](https://github.com/EmersonBraun/siscoger-backend-v2/commit/86c1b88574bbc29b60ac8e9bd2a21c9ee277fcfa))
+
 ## [0.17.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.16.0...v0.17.0) (2020-10-15)
 
 
