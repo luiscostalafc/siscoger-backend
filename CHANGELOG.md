@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.12.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.11.1...v0.12.0) (2020-10-15)
+
+
+### Features
+
+* add module andamento and andamentocoger ([9e81d2b](https://github.com/EmersonBraun/siscoger-backend-v2/commit/9e81d2b78bf590cb47a19834da2a2bbf36630f2c))
+
 ### [0.11.1](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.11.0...v0.11.1) (2020-10-15)
 
 
