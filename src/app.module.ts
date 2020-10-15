@@ -13,20 +13,24 @@ import { EnvolvidoModule } from './modules/envolvido/envolvido.module';
 import { AndamentoModule } from './modules/andamento/andamento.module';
 import { AndamentocogerModule } from './modules/andamentocoger/andamentocoger.module';
 import { ComportamentoModule } from './modules/comportamento/comportamento.module';
+import { FalecimentoModule } from './modules/falecimento/falecimento.module';
+import { FeriadoModule } from './modules/feriado/feriado.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot(typeOrmOptions),
-    SindicanciaModule,
-    LigacaoModule,
-    MovimentoModule,
-    OfendidoModule,
-    SobrestamentoModule,
-    EnvolvidoModule,
     AndamentoModule,
     AndamentocogerModule,
     ComportamentoModule,
+    EnvolvidoModule,
+    FalecimentoModule,
+    FeriadoModule,
+    LigacaoModule,
+    MovimentoModule,
+    OfendidoModule,
+    SindicanciaModule,
+    SobrestamentoModule,
   ],
 })
 export class AppModule {
