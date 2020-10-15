@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.15.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.14.0...v0.15.0) (2020-10-15)
+
+
+### Features
+
+* add module feriado ([92a5a27](https://github.com/EmersonBraun/siscoger-backend-v2/commit/92a5a27a9f378229bb2b78fe1d7480ab59b2158f))
+
 ## [0.14.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.13.0...v0.14.0) (2020-10-15)
 
 
