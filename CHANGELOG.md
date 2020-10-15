@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.12.0...v0.13.0) (2020-10-15)
+
+
+### Features
+
+* add module comportamento ([b4e1cbd](https://github.com/EmersonBraun/siscoger-backend-v2/commit/b4e1cbd191c5031bf3f65e078682703ccd63981a))
+
 ## [0.12.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.11.1...v0.12.0) (2020-10-15)
 
 
