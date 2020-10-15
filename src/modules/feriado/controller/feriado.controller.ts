@@ -25,7 +25,7 @@ import { Feriado } from '../entity/feriado.entity';
 import { FeriadoService } from '../service/feriado.service';
 
 @ApiTags('Feriado')
-@Controller('Feriados')
+@Controller('feriados')
 export class FeriadoController {
   constructor(private service: FeriadoService) {}
 

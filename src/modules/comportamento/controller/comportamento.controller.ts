@@ -25,7 +25,7 @@ import { Comportamento } from '../entity/comportamento.entity';
 import { ComportamentoService } from '../service/comportamento.service';
 
 @ApiTags('Comportamento')
-@Controller('Comportamentos')
+@Controller('comportamentos')
 export class ComportamentoController {
   constructor(private service: ComportamentoService) {}
 
