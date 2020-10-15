@@ -15,6 +15,7 @@ import { AndamentocogerModule } from './modules/andamentocoger/andamentocoger.mo
 import { ComportamentoModule } from './modules/comportamento/comportamento.module';
 import { FalecimentoModule } from './modules/falecimento/falecimento.module';
 import { FeriadoModule } from './modules/feriado/feriado.module';
+import { GradacaoModule } from './modules/gradacao/gradacao.module';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { FeriadoModule } from './modules/feriado/feriado.module';
     EnvolvidoModule,
     FalecimentoModule,
     FeriadoModule,
+    GradacaoModule,
     LigacaoModule,
     MovimentoModule,
     OfendidoModule,
