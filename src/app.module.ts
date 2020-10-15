@@ -10,6 +10,9 @@ import { MovimentoModule } from './modules/movimento/movimento.module';
 import { OfendidoModule } from './modules/ofendido/ofendido.module';
 import { SobrestamentoModule } from './modules/sobrestamento/sobrestamento.module';
 import { EnvolvidoModule } from './modules/envolvido/envolvido.module';
+import { AndamentoModule } from './modules/andamento/andamento.module';
+import { AndamentocogerModule } from './modules/andamentocoger/andamentocoger.module';
+import { ComportamentoModule } from './modules/comportamento/comportamento.module';
 
 @Module({
   imports: [
@@ -21,6 +24,9 @@ import { EnvolvidoModule } from './modules/envolvido/envolvido.module';
     OfendidoModule,
     SobrestamentoModule,
     EnvolvidoModule,
+    AndamentoModule,
+    AndamentocogerModule,
+    ComportamentoModule,
   ],
 })
 export class AppModule {
