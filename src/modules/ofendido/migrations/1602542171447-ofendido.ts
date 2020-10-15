@@ -4,7 +4,7 @@ export class ofendido1602542171447 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(new Table({
-            name: "ligacoes",
+            name: "ofendidos",
             columns: [
                 { name: "id", type: "integer", isPrimary: true, isGenerated: true, generationStrategy: 'increment' },                
                 
@@ -39,7 +39,7 @@ export class ofendido1602542171447 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropTable("ligacoes");
+        await queryRunner.dropTable("ofendidos");
     }
 
 }

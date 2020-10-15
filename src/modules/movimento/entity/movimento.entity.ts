@@ -7,7 +7,7 @@ import {
 
 } from 'typeorm';
 
-@Entity('ligacoes')
+@Entity('movimentos')
 export class Movimento {
   @PrimaryGeneratedColumn()
   id: number;

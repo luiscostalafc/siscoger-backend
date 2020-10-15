@@ -1,8 +1,13 @@
-import { DocumentBuilder } from '@nestjs/swagger';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { version } from '../../package.json'
 
-export const documentationOptions = new DocumentBuilder()
+const documentationOptions = new DocumentBuilder()
     .setTitle('SISCOGER API')
     .setDescription('SISCOGER API documentation')
     .setVersion(version)
     .build();
+
+export function setupDocumentation (app) {
+    const document = SwaggerModule.createDocument(app, documentationOptions);
+    SwaggerModule.setup('documentation', app, document);
+}

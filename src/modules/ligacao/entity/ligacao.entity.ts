@@ -11,7 +11,7 @@ import {
 export class Ligacao {
   @PrimaryGeneratedColumn()
   id: number;
-
+  
   @Column({ nullable: true })
   origem_opm: string;
 
