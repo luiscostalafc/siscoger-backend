@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.14.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.13.0...v0.14.0) (2020-10-15)
+
+
+### Features
+
+* add module falecimento ([cea7257](https://github.com/EmersonBraun/siscoger-backend-v2/commit/cea725798f875148e3324b0a196972702af9176c))
+
 ## [0.13.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.12.0...v0.13.0) (2020-10-15)
 
 
