@@ -8,6 +8,7 @@ export class RefYearPipe implements PipeTransform {
   ) {}
   // constructor(private type: string){}
   async transform(value: any, metadata: ArgumentMetadata) {
+    console.log(metadata)
     value.sjd_ref_year = this.service.getNextRefYear(value)
     value.sjd_ref = await this.service.getNextRef(value)
     return value;

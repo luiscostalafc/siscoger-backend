@@ -20,6 +20,7 @@ import {
 import { ErrorResponse } from '../../../common/responses';
 
 import { CreateSindicanciaDto } from '../dtos/create.dto';
+import { SearchPortariaDto } from '../dtos/search-portaria.dto';
 import { UpdateSindicanciaDto } from '../dtos/update.dto';
 import { Sindicancia } from '../entity/sindicancia.entity';
 import { SindicanciaService } from '../service/sindicancia.service';
@@ -35,6 +36,17 @@ export class SindicanciaController {
   @ApiOkResponse({ type: [CreateSindicanciaDto], description: 'The found Sindicancia' })
   async findAll(): Promise<Sindicancia[]> {
     return await this.service.findAll();
+  }
+
+  @Post('portarias')
+  @HttpCode(200)
+  @ApiOperation({ summary: 'Found Sindicancia' })
+  @ApiOkResponse({ type: CreateSindicanciaDto, description: 'Found Sindicancia' })
+  @ApiBadRequestResponse({ type: ErrorResponse, description: 'Bad Request', })
+  async findPortaria(
+    @Body() data: SearchPortariaDto,
+    ): Promise<any> {
+    return await this.service.findPortaria(data);
   }
 
   @Post()

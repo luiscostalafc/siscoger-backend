@@ -12,8 +12,6 @@ export class Envolvido {
   @PrimaryGeneratedColumn()
   id: number;
 
-
-  
   @Column({ nullable: true })
   rg_substituto: string
   
