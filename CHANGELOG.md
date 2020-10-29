@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.18.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.17.2...v0.18.0) (2020-10-29)
+
+
+### Features
+
+* add functions to search in envolvido, ligacao, movimento, ofendido, sindicancia, sobrestamento ([4569ae8](https://github.com/EmersonBraun/siscoger-backend-v2/commit/4569ae8f8a99078b7c8d74bc2ad3c258ad3c76e4))
+
 ### [0.17.2](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.17.1...v0.17.2) (2020-10-20)
 
 
