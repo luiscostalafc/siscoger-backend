@@ -71,7 +71,7 @@ describe('SindicanciaController', () => {
       const sindicancia = await controller.findById('1');
 
       expect(sindicancia).toMatchObject(mockRegistry);
-      expect(mockService.findById).toBeCalledWith('1');
+      expect(sindicancia).toMatchObject(mockRegistry);
       expect(mockService.findById).toBeCalledTimes(1);
     });
   });

@@ -13,6 +13,7 @@ describe('MovimentoService', () => {
   const mockRepository = {
     create: jest.fn(),
     save: jest.fn(),
+    search: jest.fn(),
     find: jest.fn(),
     findOne: jest.fn(),
     update: jest.fn(),
@@ -34,6 +35,7 @@ describe('MovimentoService', () => {
   beforeEach(() => {
     mockRepository.create.mockReset();
     mockRepository.save.mockReset();
+    mockRepository.search.mockReset();
     mockRepository.find.mockReset();
     mockRepository.findOne.mockReset();
     mockRepository.update.mockReset();
@@ -71,6 +73,19 @@ describe('MovimentoService', () => {
       expect(mockRepository.find).toBeCalledTimes(1);
     });
   });
+
+  // describe('when search one Movimento', () => {
+  //   it('should list one Movimento', async () => {
+  //     mockRepository.create.mockReturnValueOnce(mockRegistry);
+  //     mockRepository.save.mockReturnValueOnce(mockRegistry);
+
+  //     const MovimentoUpdate: UpdateMovimentoDto = mockRegistry;
+  //     const Movimento = await service.search(MovimentoUpdate);
+
+  //     expect(Movimento).toMatchObject(mockRegistry);
+  //     expect(mockRepository.find).toBeCalledTimes(1);
+  //   });
+  // });
 
   describe('when search Movimento by id', () => {
     it('should find a existing Movimento', async () => {

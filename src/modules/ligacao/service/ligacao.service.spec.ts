@@ -13,6 +13,7 @@ describe('LigacaoService', () => {
   const mockRepository = {
     create: jest.fn(),
     save: jest.fn(),
+    search: jest.fn(),
     find: jest.fn(),
     findOne: jest.fn(),
     update: jest.fn(),
@@ -34,6 +35,7 @@ describe('LigacaoService', () => {
   beforeEach(() => {
     mockRepository.create.mockReset();
     mockRepository.save.mockReset();
+    mockRepository.search.mockReset();
     mockRepository.find.mockReset();
     mockRepository.findOne.mockReset();
     mockRepository.update.mockReset();
@@ -71,6 +73,19 @@ describe('LigacaoService', () => {
       expect(mockRepository.find).toBeCalledTimes(1);
     });
   });
+
+  // describe('when search one Ligacao', () => {
+  //   it('should list one Ligacao', async () => {
+  //     mockRepository.create.mockReturnValueOnce(mockRegistry);
+  //     mockRepository.save.mockReturnValueOnce(mockRegistry);
+
+  //     const LigacaoUpdate: UpdateLigacaoDto = mockRegistry;
+  //     const Ligacao = await service.search(LigacaoUpdate);
+
+  //     expect(Ligacao).toMatchObject(mockRegistry);
+  //     expect(mockRepository.find).toBeCalledTimes(1);
+  //   });
+  // });
 
   describe('when search Ligacao by id', () => {
     it('should find a existing Ligacao', async () => {

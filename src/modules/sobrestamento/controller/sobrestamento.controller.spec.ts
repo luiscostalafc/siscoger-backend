@@ -11,6 +11,7 @@ describe('SobrestamentoController', () => {
   const mockService = {
     create: jest.fn(),
     findAll: jest.fn(),
+    search: jest.fn(),
     findById: jest.fn(),
     update: jest.fn(),
     delete: jest.fn(),
@@ -29,6 +30,7 @@ describe('SobrestamentoController', () => {
   beforeEach(() => {
     mockService.create.mockReset();
     mockService.findAll.mockReset();
+    mockService.search.mockReset();
     mockService.findById.mockReset();
     mockService.update.mockReset();
     mockService.delete.mockReset();
@@ -61,6 +63,18 @@ describe('SobrestamentoController', () => {
       expect(Sobrestamento).toHaveLength(1);
       expect(Sobrestamento).toMatchObject([mockRegistry]);
       expect(mockService.findAll).toBeCalledTimes(1);
+    });
+  });
+
+  describe('when search one Sobrestamento', () => {
+    it('should search one Sobrestamento and return them', async () => {
+      mockService.search.mockReturnValue([mockRegistry]);
+      const SobrestamentoUpdate: UpdateSobrestamentoDto = mockRegistry;
+      const Sobrestamento = await controller.search(SobrestamentoUpdate);
+
+      expect(Sobrestamento).toHaveLength(1);
+      expect(Sobrestamento).toMatchObject([mockRegistry]);
+      expect(mockService.search).toBeCalledTimes(1);
     });
   });
 

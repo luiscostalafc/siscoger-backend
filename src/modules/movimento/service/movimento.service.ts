@@ -16,6 +16,11 @@ export class MovimentoService {
     return await this.repository.find();
   }
 
+  async search(data: CreateMovimentoDto): Promise<Movimento[]> {
+    console.log(data)
+    return await this.repository.find({ where: { ...data } });
+  }
+
   async create(data: CreateMovimentoDto): Promise<Movimento> {
     const registry = this.repository.create(data);
     return await this.repository.save(registry);

@@ -13,6 +13,7 @@ describe('EnvolvidoService', () => {
   const mockRepository = {
     create: jest.fn(),
     save: jest.fn(),
+    search: jest.fn(),
     find: jest.fn(),
     findOne: jest.fn(),
     update: jest.fn(),
@@ -34,6 +35,7 @@ describe('EnvolvidoService', () => {
   beforeEach(() => {
     mockRepository.create.mockReset();
     mockRepository.save.mockReset();
+    mockRepository.search.mockReset();
     mockRepository.find.mockReset();
     mockRepository.findOne.mockReset();
     mockRepository.update.mockReset();
@@ -71,6 +73,19 @@ describe('EnvolvidoService', () => {
       expect(mockRepository.find).toBeCalledTimes(1);
     });
   });
+
+  // describe('when search one Envolvido', () => {
+  //   it('should list one Envolvido', async () => {
+  //     mockRepository.create.mockReturnValueOnce(mockRegistry);
+  //     mockRepository.save.mockReturnValueOnce(mockRegistry);
+
+  //     const EnvolvidoUpdate: UpdateEnvolvidoDto = mockRegistry;
+  //     const Envolvido = await service.search(EnvolvidoUpdate);
+
+  //     expect(Envolvido).toMatchObject(mockRegistry);
+  //     expect(mockRepository.find).toBeCalledTimes(1);
+  //   });
+  // });
 
   describe('when search Envolvido by id', () => {
     it('should find a existing Envolvido', async () => {

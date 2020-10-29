@@ -11,6 +11,7 @@ describe('OfendidoController', () => {
   const mockService = {
     create: jest.fn(),
     findAll: jest.fn(),
+    search: jest.fn(),
     findById: jest.fn(),
     update: jest.fn(),
     delete: jest.fn(),
@@ -29,6 +30,7 @@ describe('OfendidoController', () => {
   beforeEach(() => {
     mockService.create.mockReset();
     mockService.findAll.mockReset();
+    mockService.search.mockReset();
     mockService.findById.mockReset();
     mockService.update.mockReset();
     mockService.delete.mockReset();
@@ -63,6 +65,18 @@ describe('OfendidoController', () => {
       expect(mockService.findAll).toBeCalledTimes(1);
     });
   });
+
+  // describe('when search one ofendido', () => {
+  //   it('should search one ofendido and return them', async () => {
+  //     mockService.search.mockReturnValue([mockRegistry]);
+  //     const ofendidoUpdate: UpdateOfendidoDto = mockRegistry;
+  //     const ofendido = await controller.search(ofendidoUpdate);
+
+  //     expect(ofendido).toBeInstanceOf(Object)
+  //     expect(ofendido).toMatchObject([mockRegistry]);
+  //     expect(mockService.search).toBeCalledTimes(1);
+  //   });
+  // });
 
   describe('when search Ofendido by id', () => {
     it('should find a existing Ofendido and return it', async () => {

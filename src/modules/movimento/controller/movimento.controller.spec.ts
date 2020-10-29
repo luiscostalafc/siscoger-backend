@@ -11,6 +11,7 @@ describe('MovimentoController', () => {
   const mockService = {
     create: jest.fn(),
     findAll: jest.fn(),
+    search: jest.fn(),
     findById: jest.fn(),
     update: jest.fn(),
     delete: jest.fn(),
@@ -29,6 +30,7 @@ describe('MovimentoController', () => {
   beforeEach(() => {
     mockService.create.mockReset();
     mockService.findAll.mockReset();
+    mockService.search.mockReset();
     mockService.findById.mockReset();
     mockService.update.mockReset();
     mockService.delete.mockReset();
@@ -63,6 +65,18 @@ describe('MovimentoController', () => {
       expect(mockService.findAll).toBeCalledTimes(1);
     });
   });
+
+  // describe('when search one Movimento', () => {
+  //   it('should search one Movimento and return them', async () => {
+  //     mockService.search.mockReturnValue([mockRegistry]);
+  //     const MovimentoUpdate: UpdateMovimentoDto = mockRegistry;
+  //     const Movimento = await controller.search(MovimentoUpdate);
+
+  //     expect(Movimento).toBeInstanceOf(Object)
+  //     expect(Movimento).toMatchObject([mockRegistry]);
+  //     expect(mockService.search).toBeCalledTimes(1);
+  //   });
+  // });
 
   describe('when search Movimento by id', () => {
     it('should find a existing Movimento and return it', async () => {

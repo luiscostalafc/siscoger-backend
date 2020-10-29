@@ -16,6 +16,11 @@ export class SobrestamentoService {
     return await this.repository.find();
   }
 
+  async search(data: CreateSobrestamentoDto): Promise<Sobrestamento[]> {
+    return await this.repository.find({ where: { ...data } });
+  }
+
+
   async create(data: CreateSobrestamentoDto): Promise<Sobrestamento> {
     const registry = this.repository.create(data);
     return await this.repository.save(registry);

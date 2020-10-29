@@ -16,6 +16,10 @@ export class EnvolvidoService {
     return await this.repository.find();
   }
 
+  async search(data: CreateEnvolvidoDto): Promise<Envolvido[]> {
+    return await this.repository.find({ where: { ...data } });
+  }
+
   async create(data: CreateEnvolvidoDto): Promise<Envolvido> {
     const registry = this.repository.create(data);
     return await this.repository.save(registry);

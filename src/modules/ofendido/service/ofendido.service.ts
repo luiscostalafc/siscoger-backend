@@ -16,6 +16,10 @@ export class OfendidoService {
     return await this.repository.find();
   }
 
+  async search(data: CreateOfendidoDto): Promise<Ofendido[]> {
+    return await this.repository.find({ where: { ...data } });
+  }
+
   async create(data: CreateOfendidoDto): Promise<Ofendido> {
     const registry = this.repository.create(data);
     return await this.repository.save(registry);

@@ -13,6 +13,7 @@ describe('OfendidoService', () => {
   const mockRepository = {
     create: jest.fn(),
     save: jest.fn(),
+    search: jest.fn(),
     find: jest.fn(),
     findOne: jest.fn(),
     update: jest.fn(),
@@ -34,6 +35,7 @@ describe('OfendidoService', () => {
   beforeEach(() => {
     mockRepository.create.mockReset();
     mockRepository.save.mockReset();
+    mockRepository.search.mockReset();
     mockRepository.find.mockReset();
     mockRepository.findOne.mockReset();
     mockRepository.update.mockReset();
@@ -71,6 +73,19 @@ describe('OfendidoService', () => {
       expect(mockRepository.find).toBeCalledTimes(1);
     });
   });
+
+  // describe('when search one Ofendido', () => {
+  //   it('should list one Ofendido', async () => {
+  //     mockRepository.create.mockReturnValueOnce(mockRegistry);
+  //     mockRepository.save.mockReturnValueOnce(mockRegistry);
+
+  //     const OfendidoUpdate: UpdateOfendidoDto = mockRegistry;
+  //     const Ofendido = await service.search(OfendidoUpdate);
+
+  //     expect(Ofendido).toMatchObject(mockRegistry);
+  //     expect(mockRepository.find).toBeCalledTimes(1);
+  //   });
+  // });
 
   describe('when search Ofendido by id', () => {
     it('should find a existing Ofendido', async () => {

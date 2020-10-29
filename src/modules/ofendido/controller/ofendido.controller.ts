@@ -37,6 +37,15 @@ export class OfendidoController {
     return await this.service.findAll();
   }
 
+  @Post('search')
+  @HttpCode(200)
+  @ApiOperation({ summary: 'Search ofendido' })
+  @ApiCreatedResponse({ type: UpdateOfendidoDto, description: 'Searched Ligacao' })
+  @ApiBadRequestResponse({ type: ErrorResponse, description: 'Bad Request', })
+  async search(@Body() data: CreateOfendidoDto): Promise<Ofendido[]> {
+    return await this.service.search(data);
+  }
+
   @Post()
   @HttpCode(201)
   @ApiOperation({ summary: 'Create a new Ofendido' })

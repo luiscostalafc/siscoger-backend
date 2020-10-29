@@ -16,6 +16,10 @@ export class LigacaoService {
     return await this.repository.find();
   }
 
+  async search(data: CreateLigacaoDto): Promise<Ligacao[]> {
+    return await this.repository.find({ where: { ...data } });
+  }
+
   async create(data: CreateLigacaoDto): Promise<Ligacao> {
     const registry = this.repository.create(data);
     return await this.repository.save(registry);

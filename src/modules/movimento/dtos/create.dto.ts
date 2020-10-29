@@ -1,6 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
 import {
-  IsDate,
   IsNumber,
   IsOptional,
   IsPositive,
@@ -9,9 +8,8 @@ import {
 
 export class CreateMovimentoDto {
   @IsOptional()
-  @IsDate()
   @ApiProperty()
-  data?: Date
+  data?: string | Date
 
   @IsOptional()
   @IsString()

@@ -37,6 +37,15 @@ export class LigacaoController {
     return await this.service.findAll();
   }
 
+  @Post('search')
+  @HttpCode(200)
+  @ApiOperation({ summary: 'Search Ligacao' })
+  @ApiCreatedResponse({ type: UpdateLigacaoDto, description: 'Searched Ligacao' })
+  @ApiBadRequestResponse({ type: ErrorResponse, description: 'Bad Request', })
+  async search(@Body() data: CreateLigacaoDto): Promise<Ligacao[]> {
+    return await this.service.search(data);
+  }
+
   @Post()
   @HttpCode(201)
   @ApiOperation({ summary: 'Create a new Ligacao' })

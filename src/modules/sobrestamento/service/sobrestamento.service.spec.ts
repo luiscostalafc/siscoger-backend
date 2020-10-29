@@ -13,6 +13,7 @@ describe('SobrestamentoService', () => {
   const mockRepository = {
     create: jest.fn(),
     save: jest.fn(),
+    search: jest.fn(),
     find: jest.fn(),
     findOne: jest.fn(),
     update: jest.fn(),
@@ -34,6 +35,7 @@ describe('SobrestamentoService', () => {
   beforeEach(() => {
     mockRepository.create.mockReset();
     mockRepository.save.mockReset();
+    mockRepository.search.mockReset();
     mockRepository.find.mockReset();
     mockRepository.findOne.mockReset();
     mockRepository.update.mockReset();
@@ -71,6 +73,19 @@ describe('SobrestamentoService', () => {
       expect(mockRepository.find).toBeCalledTimes(1);
     });
   });
+
+  // describe('when search one Sobrestamento', () => {
+  //   it('should list one Sobrestamento', async () => {
+  //     mockRepository.create.mockReturnValueOnce(mockRegistry);
+  //     mockRepository.save.mockReturnValueOnce(mockRegistry);
+
+  //     const SobrestamentoUpdate: UpdateSobrestamentoDto = mockRegistry;
+  //     const Sobrestamento = await service.search(SobrestamentoUpdate);
+
+  //     expect(Sobrestamento).toMatchObject(mockRegistry);
+  //     expect(mockRepository.find).toBeCalledTimes(1);
+  //   });
+  // });
 
   describe('when search Sobrestamento by id', () => {
     it('should find a existing Sobrestamento', async () => {

@@ -37,6 +37,15 @@ export class EnvolvidoController {
     return await this.service.findAll();
   }
 
+  @Post('search')
+  @HttpCode(200)
+  @ApiOperation({ summary: 'Search Envolvido' })
+  @ApiCreatedResponse({ type: UpdateEnvolvidoDto, description: 'Searched Ligacao' })
+  @ApiBadRequestResponse({ type: ErrorResponse, description: 'Bad Request', })
+  async search(@Body() data: CreateEnvolvidoDto): Promise<Envolvido[]> {
+    return await this.service.search(data);
+  }
+
   @Post()
   @HttpCode(201)
   @ApiOperation({ summary: 'Create a new Envolvido' })

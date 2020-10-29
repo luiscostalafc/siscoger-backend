@@ -38,12 +38,12 @@ export class UpdateSindicanciaDto {
   @IsOptional()
   @IsDate()
   @ApiProperty()
-  fato_data?: Date
+  fato_data?: string | Date
 
   @IsOptional()
   @IsDate()
   @ApiProperty()
-  abertura_data?: Date
+  abertura_data?: string | Date
 
   @IsString()
   @IsNotEmpty()
@@ -79,7 +79,7 @@ export class UpdateSindicanciaDto {
   // @IsDate()
   @IsNotEmpty()
   @ApiProperty()
-  portaria_data: Date
+  portaria_data: string | Date
 
   @IsOptional()
   @IsString()
@@ -89,7 +89,7 @@ export class UpdateSindicanciaDto {
   @IsOptional()
   @IsDate()
   @ApiProperty()
-  sol_cmt_data?: Date
+  sol_cmt_data?: string | Date
 
   @IsOptional()
   @IsString()
@@ -99,7 +99,7 @@ export class UpdateSindicanciaDto {
   @IsOptional()
   @IsDate()
   @ApiProperty()
-  sol_cmtgeral_data?: Date
+  sol_cmtgeral_data?: string | Date
 
   @IsOptional()
   @IsString()
@@ -114,7 +114,7 @@ export class UpdateSindicanciaDto {
   @IsOptional()
   @IsDate()
   @ApiProperty()
-  relatorio_data?: Date
+  relatorio_data?: string | Date
 
   @IsOptional()
   @IsBoolean()

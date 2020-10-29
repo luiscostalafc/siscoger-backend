@@ -37,6 +37,15 @@ export class MovimentoController {
     return await this.service.findAll();
   }
 
+  @Post('search')
+  @HttpCode(200)
+  @ApiOperation({ summary: 'Search Movimento' })
+  @ApiCreatedResponse({ type: UpdateMovimentoDto, description: 'Searched Movimento' })
+  @ApiBadRequestResponse({ type: ErrorResponse, description: 'Bad Request', })
+  async search(@Body() data: CreateMovimentoDto): Promise<Movimento[]> {
+    return await this.service.search(data);
+  }
+
   @Post()
   @HttpCode(201)
   @ApiOperation({ summary: 'Create a new Movimento' })

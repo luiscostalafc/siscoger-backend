@@ -37,6 +37,15 @@ export class SobrestamentoController {
     return await this.service.findAll();
   }
 
+  @Post('search')
+  @HttpCode(200)
+  @ApiOperation({ summary: 'Search Sobrestamento' })
+  @ApiCreatedResponse({ type: UpdateSobrestamentoDto, description: 'Searched Sobrestamento' })
+  @ApiBadRequestResponse({ type: ErrorResponse, description: 'Bad Request', })
+  async search(@Body() data: CreateSobrestamentoDto): Promise<Sobrestamento[]> {
+    return await this.service.search(data);
+  }
+
   @Post()
   @HttpCode(201)
   @ApiOperation({ summary: 'Create a new Sobrestamento' })

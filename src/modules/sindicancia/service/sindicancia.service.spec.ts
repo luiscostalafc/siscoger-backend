@@ -72,6 +72,19 @@ describe('SindicanciaService', () => {
     });
   });
 
+  // describe('when search one Sindicancia', () => {
+  //   it('should list one Sindicancia', async () => {
+  //     mockRepository.create.mockReturnValueOnce(mockRegistry);
+  //     mockRepository.save.mockReturnValueOnce(mockRegistry);
+
+  //     const SindicanciaUpdate: UpdateSindicanciaDto = mockRegistry;
+  //     const Sindicancia = await service.search(SindicanciaUpdate);
+
+  //     expect(Sindicancia).toMatchObject(mockRegistry);
+  //     expect(mockRepository.find).toBeCalledTimes(1);
+  //   });
+  // });
+
   describe('when search sindicancia by id', () => {
     it('should find a existing sindicancia', async () => {
       mockRepository.findOne.mockReturnValue(mockRegistry);
