@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.19.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.18.1...v0.19.0) (2020-11-05)
+
+
+### Features
+
+* add new logger ([f5b40b6](https://github.com/EmersonBraun/siscoger-backend-v2/commit/f5b40b649a34c0415f87a4ae0b6a54206d530f28))
+
+
+### Bug Fixes
+
+* solve tests in andamentocoger module ([d75c2c4](https://github.com/EmersonBraun/siscoger-backend-v2/commit/d75c2c40e4d8bf12426085edfc7ad1b4499eb9a6))
+
 ### [0.18.1](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.18.0...v0.18.1) (2020-11-05)
 
 
