@@ -98,7 +98,7 @@ describe('AndamentocogerService', () => {
   describe('when update a Andamentocoger', () => {
     it('should update a existing Andamentocoger', async () => {
       const AndamentocogerUpdate: UpdateAndamentocogerDto = mockRegistry;
-      AndamentocogerUpdate.Andamentocogercoger = 'Update Andamentocoger '
+      AndamentocogerUpdate.andamentocoger = 'Update Andamentocoger '
 
       mockRepository.findOne.mockReturnValue(mockRegistry);
       mockRepository.update.mockReturnValue({
