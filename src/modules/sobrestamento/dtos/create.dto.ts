@@ -1,6 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
 import {
-  IsDate,
   IsNumber,
   IsOptional,
   IsPositive,
@@ -14,9 +13,8 @@ export class CreateSobrestamentoDto {
   rg?: string
 
   @IsOptional()
-  @IsDate()
   @ApiProperty()
-  inicio_data?: Date
+  inicio_data?: string | Date
 
   @IsOptional()
   @IsString()
@@ -24,9 +22,8 @@ export class CreateSobrestamentoDto {
   publicacao_inicio?: string
 
   @IsOptional()
-  @IsDate()
   @ApiProperty()
-  termino_data?: Date
+  termino_data?: string | Date
 
   @IsOptional()
   @IsString()

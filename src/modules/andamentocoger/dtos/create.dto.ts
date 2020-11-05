@@ -8,7 +8,7 @@ export class CreateAndamentocogerDto {
   @IsOptional()
   @IsString()
   @ApiProperty()
-  Andamentocogercoger?: string
+  andamentocoger?: string
   
   @IsOptional()
   @IsString()

@@ -8,7 +8,7 @@ export class gradacao1602771158885 implements MigrationInterface {
             columns: [
                 { name: "id", type: "integer", isPrimary: true, isGenerated: true, generationStrategy: 'increment' },
                 { name: 'gradacao', type: 'varchar', isNullable: true, },
-                { name: 'rel', type: 'integer', isNullable: true, },
+                { name: 'rel', type: 'varchar', isNullable: true, },
             ]
         }), true)
     }

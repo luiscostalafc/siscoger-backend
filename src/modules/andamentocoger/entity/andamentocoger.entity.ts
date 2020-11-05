@@ -10,7 +10,7 @@ export class Andamentocoger {
   id: number;
 
   @Column({ nullable: true })
-  Andamentocogercoger: string
+  andamentocoger: string
   
   @Column({ nullable: true })
   procedimento: string

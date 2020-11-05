@@ -5,7 +5,7 @@ import { CreateAndamentocogerDto } from '../dtos/create.dto';
 
 define(Andamentocoger, (faker: typeof Faker) => {
   const factory = new Andamentocoger()
-  factory.Andamentocogercoger = faker.name.findName()
+  factory.andamentocoger = faker.name.findName()
   factory.procedimento = faker.name.findName()
   return factory
 })
@@ -13,7 +13,7 @@ define(Andamentocoger, (faker: typeof Faker) => {
 export const fakerRegistry = ():CreateAndamentocogerDto => {
   const faker = Faker
   return {
-    Andamentocogercoger: faker.name.findName(),
+    andamentocoger: faker.name.findName(),
     procedimento: faker.name.findName(),
   }
 }

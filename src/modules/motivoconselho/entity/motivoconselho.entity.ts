@@ -4,7 +4,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-@Entity('Motivoconselhos')
+@Entity('motivoconselhos')
 export class Motivoconselho {
   @PrimaryGeneratedColumn()
   id: number;
