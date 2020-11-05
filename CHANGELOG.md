@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.19.1](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.19.0...v0.19.1) (2020-11-05)
+
+
+### Bug Fixes
+
+* solve request and response logs ([d32ef4e](https://github.com/EmersonBraun/siscoger-backend-v2/commit/d32ef4ed2e5c68b56f7a84d3134fcb13d2a33796))
+
 ## [0.19.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.18.1...v0.19.0) (2020-11-05)
 
 
