@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { MiddlewareConsumer, Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
@@ -16,6 +16,7 @@ import { ComportamentoModule } from './modules/comportamento/comportamento.modul
 import { FalecimentoModule } from './modules/falecimento/falecimento.module';
 import { FeriadoModule } from './modules/feriado/feriado.module';
 import { GradacaoModule } from './modules/gradacao/gradacao.module';
+import { AppLoggerMiddleware } from './common/logger/middleware';
 
 @Module({
   imports: [
@@ -37,5 +38,8 @@ import { GradacaoModule } from './modules/gradacao/gradacao.module';
 })
 export class AppModule {
   constructor(private connection: Connection) {}
+  configure(consumer: MiddlewareConsumer): void {
+    consumer.apply(AppLoggerMiddleware).forRoutes('*');
+  }
 }
 

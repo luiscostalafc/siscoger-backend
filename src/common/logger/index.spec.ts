@@ -1,6 +1,31 @@
-import { PrettyLogger } from './pretty-log'
+import { PrettyLogger, getIcon } from './pretty-log'
 
 describe('Test PrettyLogger Log', () => {
+  test('Test PrettyLogger getIcon - color and underlined', () => {
+    const val = getIcon({
+      icon: 'tick',
+      iconColor: 'green',
+      iconUnderlined: true
+    })
+    expect(val).toContain("✔")
+  })
+
+  test('Test PrettyLogger getIcon - color', () => {
+    const val = getIcon({
+      icon: 'tick',
+      iconColor: 'green'
+    })
+    expect(val).toContain("✔")
+  })
+
+  test('Test PrettyLogger getIcon - color', () => {
+    const val = getIcon({
+      icon: 'tick',
+      iconUnderlined: true
+    })
+    expect(val).toContain("✔")
+  })
+
   test('Test PrettyLogger log', () => {
     const val = new PrettyLogger().log('test log')
     expect(val).toBe(true)

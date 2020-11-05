@@ -1,10 +1,10 @@
-import { LoggerService } from '@nestjs/common';
+import { Injectable, Scope, Logger } from '@nestjs/common';
 import chalk from 'chalk'
 import figures from 'figures'
 
 import { Options } from './types'
 
-function getIcon(options: Options) {
+export function getIcon(options: Options): string {
   const selectedIcon = options.icon || 'tick'
   if (options.iconColor && options.iconUnderlined) {
     return `${chalk.underline[options.iconColor](figures[selectedIcon])}`
@@ -67,7 +67,8 @@ function printColoredLog(
   else console.log(`${icon}${title}${msg}`)
 }
 
-export class PrettyLogger implements LoggerService {
+@Injectable({ scope: Scope.TRANSIENT })
+export class PrettyLogger extends Logger {
   log(message: string) {
     printColoredLog(message, null, {
       icon: 'tick',
