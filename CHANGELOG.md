@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.20.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.19.1...v0.20.0) (2020-11-13)
+
+
+### Features
+
+* add adl module ([31b0a19](https://github.com/EmersonBraun/siscoger-backend-v2/commit/31b0a19c7086692eae9d872289ef1f9b2da54262))
+
 ### [0.19.1](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.19.0...v0.19.1) (2020-11-05)
 
 
