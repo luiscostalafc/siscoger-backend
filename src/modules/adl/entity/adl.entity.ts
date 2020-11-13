@@ -104,5 +104,4 @@ export class Adl {
   
   @Column({nullable: true})
   prioridade: number
-
 }
