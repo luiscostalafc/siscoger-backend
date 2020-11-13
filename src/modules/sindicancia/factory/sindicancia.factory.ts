@@ -1,7 +1,7 @@
-import * as Faker from 'faker'
-import { define } from 'typeorm-seeding'
-import { Sindicancia } from '../entity/sindicancia.entity';
+import * as Faker from 'faker';
+import { define } from 'typeorm-seeding';
 import { CreateSindicanciaDto } from '../dtos/create.dto';
+import { Sindicancia } from '../entity/sindicancia.entity';
 
 define(Sindicancia, (faker: typeof Faker) => {
   const factory = new Sindicancia()
@@ -29,6 +29,7 @@ define(Sindicancia, (faker: typeof Faker) => {
   factory.sol_cmt_file = faker.name.findName()
   factory.sol_cmtgeral_data = faker.date.past(1)
   factory.sol_cmtgeral_file = faker.name.findName()
+  factory.completo = faker.random.boolean()
   return factory
 })
 
@@ -59,5 +60,6 @@ export const fakerRegistry = ():CreateSindicanciaDto => {
     sol_cmt_file: faker.name.findName(),
     sol_cmtgeral_data: faker.date.past(1),
     sol_cmtgeral_file: faker.name.findName(),
+    completo: faker.random.boolean()
   }
 }

@@ -1,13 +1,12 @@
 import { ApiProperty } from '@nestjs/swagger';
 import {
   IsBoolean,
-  IsDate,
   IsNotEmpty,
   IsNumber,
   IsOptional,
   IsPositive,
   IsString,
-  MinLength,
+  MinLength
 } from 'class-validator';
 
 export class CreateSindicanciaDto {
@@ -36,12 +35,10 @@ export class CreateSindicanciaDto {
   sjd_ref_ano?: number
 
   @IsOptional()
-  @IsDate()
   @ApiProperty()
   fato_data?: string | Date
 
   @IsOptional()
-  @IsDate()
   @ApiProperty()
   abertura_data?: string | Date
 
@@ -87,7 +84,6 @@ export class CreateSindicanciaDto {
   sol_cmt_file?: string
 
   @IsOptional()
-  @IsDate()
   @ApiProperty()
   sol_cmt_data?: string | Date
 
@@ -97,7 +93,6 @@ export class CreateSindicanciaDto {
   sol_cmtgeral_file?: string
 
   @IsOptional()
-  @IsDate()
   @ApiProperty()
   sol_cmtgeral_data?: string | Date
 
@@ -112,7 +107,6 @@ export class CreateSindicanciaDto {
   relatorio_file?: string
 
   @IsOptional()
-  @IsDate()
   @ApiProperty()
   relatorio_data?: string | Date
 
@@ -145,4 +139,9 @@ export class CreateSindicanciaDto {
   @IsNumber()
   @ApiProperty()
   prorogacao_dias?: number
+
+  @IsOptional()
+  @IsBoolean()
+  @ApiProperty()
+  completo?: boolean
 }

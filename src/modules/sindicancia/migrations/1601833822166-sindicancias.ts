@@ -1,4 +1,4 @@
-import {MigrationInterface, QueryRunner, Table} from "typeorm";
+import { MigrationInterface, QueryRunner, Table } from "typeorm";
 
 export class sindicancias1601833822166 implements MigrationInterface {
 
@@ -36,7 +36,7 @@ export class sindicancias1601833822166 implements MigrationInterface {
                 { name: "motivo_outros", type: "varchar", default: null, isNullable: true },
                 { name: "prorogacao", type: "boolean", default: false, isNullable: true},
                 { name: "prorogacao_dias", type: "int", default: 0},
-                { name: "inserido", type: "boolean", default: false, isNullable: true},
+                { name: "completo", type: "boolean", default: false, isNullable: true},
             ]
         }), true)
 

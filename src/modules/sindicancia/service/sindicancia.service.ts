@@ -42,7 +42,6 @@ export class SindicanciaService {
     const registry = this.repository.create(data);
     registry.sjd_ref_ano = this.getNextRefYear(data)
     registry.sjd_ref = await this.getNextRef(data)
-    console.log(registry)
     return await this.repository.save(registry);
   }
 

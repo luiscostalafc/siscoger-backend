@@ -4,8 +4,7 @@ import {
   DeleteDateColumn,
   Entity,
   PrimaryGeneratedColumn,
-  UpdateDateColumn,
-
+  UpdateDateColumn
 } from 'typeorm';
 
 @Entity('sindicancias')
@@ -101,5 +100,5 @@ export class Sindicancia {
   prorogacao_dias: number
 
   @Column({ nullable: true })
-  inserido: boolean
+  completo: boolean
 }
