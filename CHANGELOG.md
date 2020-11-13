@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.21.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.20.1...v0.21.0) (2020-11-13)
+
+
+### Features
+
+* add app module ([6116230](https://github.com/EmersonBraun/siscoger-backend-v2/commit/6116230c3081fa7c7318e87a031ec87d9c783974))
+
 ### [0.20.1](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.20.0...v0.20.1) (2020-11-13)
 
 
