@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.21.1](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.21.0...v0.21.1) (2020-11-18)
+
+
+### Bug Fixes
+
+* solve sobrestamento uncompatibilities ([7a2ffa9](https://github.com/EmersonBraun/siscoger-backend-v2/commit/7a2ffa9c311b721d4b1c5d0aa03b9a49d297b799))
+
 ## [0.21.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.20.1...v0.21.0) (2020-11-13)
 
 
