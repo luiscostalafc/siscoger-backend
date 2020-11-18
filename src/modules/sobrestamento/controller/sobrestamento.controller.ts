@@ -6,7 +6,7 @@ import {
   HttpCode,
   Param,
   Post,
-  Put,
+  Put
 } from '@nestjs/common';
 import {
   ApiBadRequestResponse,
@@ -15,14 +15,15 @@ import {
   ApiNotFoundResponse,
   ApiOkResponse,
   ApiOperation,
-  ApiTags,
+  ApiTags
 } from '@nestjs/swagger';
 import { ErrorResponse } from '../../../common/responses';
-
+import { SearchSobrestamentoDto } from '../dtos';
 import { CreateSobrestamentoDto } from '../dtos/create.dto';
 import { UpdateSobrestamentoDto } from '../dtos/update.dto';
 import { Sobrestamento } from '../entity/sobrestamento.entity';
 import { SobrestamentoService } from '../service/sobrestamento.service';
+
 
 @ApiTags('Sobrestamento')
 @Controller('sobrestamentos')
@@ -40,9 +41,9 @@ export class SobrestamentoController {
   @Post('search')
   @HttpCode(200)
   @ApiOperation({ summary: 'Search Sobrestamento' })
-  @ApiCreatedResponse({ type: UpdateSobrestamentoDto, description: 'Searched Sobrestamento' })
+  @ApiCreatedResponse({ type: SearchSobrestamentoDto, description: 'Searched Sobrestamento' })
   @ApiBadRequestResponse({ type: ErrorResponse, description: 'Bad Request', })
-  async search(@Body() data: CreateSobrestamentoDto): Promise<Sobrestamento[]> {
+  async search(@Body() data: SearchSobrestamentoDto): Promise<Sobrestamento[]> {
     return await this.service.search(data);
   }
 

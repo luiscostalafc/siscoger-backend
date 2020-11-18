@@ -1,7 +1,7 @@
-import * as Faker from 'faker'
-import { define } from 'typeorm-seeding'
-import { Sobrestamento } from '../entity/sobrestamento.entity';
+import * as Faker from 'faker';
+import { define } from 'typeorm-seeding';
 import { CreateSobrestamentoDto } from '../dtos/create.dto';
+import { Sobrestamento } from '../entity/sobrestamento.entity';
 
 define(Sobrestamento, (faker: typeof Faker) => {
   const factory = new Sobrestamento()
@@ -18,6 +18,8 @@ define(Sobrestamento, (faker: typeof Faker) => {
   factory.id_iso = faker.random.number(999)
   factory.id_it = faker.random.number(999)
   factory.id_sindicancia = faker.random.number(999)
+  factory.doc_controle_inicio = faker.name.findName()
+  factory.doc_controle_termino = faker.name.findName()
   return factory
 })
 
@@ -37,5 +39,7 @@ export const fakerRegistry = ():CreateSobrestamentoDto => {
     id_iso: faker.random.number(999),
     id_it: faker.random.number(999),
     id_sindicancia: faker.random.number(999),
+    doc_controle_inicio: faker.name.findName(),
+    doc_controle_termino: faker.name.findName(),
   }
 }

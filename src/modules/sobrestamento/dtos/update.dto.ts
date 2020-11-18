@@ -3,7 +3,7 @@ import {
   IsNumber,
   IsOptional,
   IsPositive,
-  IsString,
+  IsString
 } from 'class-validator';
 
 export class UpdateSobrestamentoDto {
@@ -14,7 +14,7 @@ export class UpdateSobrestamentoDto {
 
   @IsOptional()
   @ApiProperty()
-  inicio_data?: string| Date
+  inicio_data?: string | Date
 
   @IsOptional()
   @IsString()
@@ -23,7 +23,7 @@ export class UpdateSobrestamentoDto {
 
   @IsOptional()
   @ApiProperty()
-  termino_data?: string| Date
+  termino_data?: string | Date
 
   @IsOptional()
   @IsString()
@@ -76,4 +76,13 @@ export class UpdateSobrestamentoDto {
   @IsPositive()
   @ApiProperty()
   id_sindicancia?: number
+
+  @IsString()
+  @ApiProperty()
+  doc_controle_inicio: string
+
+  @IsOptional()
+  @IsString()
+  @ApiProperty()
+  doc_controle_termino?: string
 }

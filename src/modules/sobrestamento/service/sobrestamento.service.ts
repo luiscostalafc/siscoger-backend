@@ -1,6 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
+import { SearchSobrestamentoDto } from '../dtos';
 import { CreateSobrestamentoDto } from '../dtos/create.dto';
 import { UpdateSobrestamentoDto } from '../dtos/update.dto';
 import { Sobrestamento } from '../entity/sobrestamento.entity';
@@ -16,7 +17,7 @@ export class SobrestamentoService {
     return await this.repository.find();
   }
 
-  async search(data: CreateSobrestamentoDto): Promise<Sobrestamento[]> {
+  async search(data: SearchSobrestamentoDto): Promise<Sobrestamento[]> {
     return await this.repository.find({ where: { ...data } });
   }
 

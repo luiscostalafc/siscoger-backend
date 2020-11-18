@@ -19,7 +19,6 @@ import { OfendidoModule } from './modules/ofendido/ofendido.module';
 import { SindicanciaModule } from './modules/sindicancia/sindicancia.module';
 import { SobrestamentoModule } from './modules/sobrestamento/sobrestamento.module';
 
-
 @Module({
   imports: [
     ConfigModule.forRoot(),

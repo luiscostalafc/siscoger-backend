@@ -6,7 +6,7 @@ import {
   IsString
 } from 'class-validator';
 
-export class CreateSobrestamentoDto {
+export class SearchSobrestamentoDto {
   @IsOptional()
   @IsString()
   @ApiProperty()
@@ -77,9 +77,10 @@ export class CreateSobrestamentoDto {
   @ApiProperty()
   id_sindicancia?: number
 
+  @IsOptional()
   @IsString()
   @ApiProperty()
-  doc_controle_inicio: string
+  doc_controle_inicio?: string
 
   @IsOptional()
   @IsString()
