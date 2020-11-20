@@ -3,7 +3,6 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
 import { typeOrmOptions } from '../src/config';
-import { MainAppModule } from './app/app.module';
 import { AppLoggerMiddleware } from './common/logger/middleware';
 import { AdlModule } from './modules/adl/adl.module';
 import { AndamentoModule } from './modules/andamento/andamento.module';
@@ -23,7 +22,6 @@ import { SobrestamentoModule } from './modules/sobrestamento/sobrestamento.modul
   imports: [
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot(typeOrmOptions),
-    MainAppModule,
     AdlModule,
     AndamentoModule,
     AndamentocogerModule,
