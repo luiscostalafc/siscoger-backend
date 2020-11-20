@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.22.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.21.1...v0.22.0) (2020-11-20)
+
+
+### Features
+
+* create arquivo module ([fb613d4](https://github.com/EmersonBraun/siscoger-backend-v2/commit/fb613d4d400107867d22f42a885dcfc6f4f5e97f))
+
+
+### Bug Fixes
+
+* remove main module ([1249723](https://github.com/EmersonBraun/siscoger-backend-v2/commit/1249723a4f8e43be9392a3d171b8bd64b3ed9065))
+
 ### [0.21.1](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.21.0...v0.21.1) (2020-11-18)
 
 
