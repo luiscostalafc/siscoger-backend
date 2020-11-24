@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.23.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.22.0...v0.23.0) (2020-11-24)
+
+
+### Features
+
+* add module scaffolder ([92d4f64](https://github.com/EmersonBraun/siscoger-backend-v2/commit/92d4f64c14e93ec07bebabda2609bfeee43e20d6))
+
 ## [0.22.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.21.1...v0.22.0) (2020-11-20)
 
 
