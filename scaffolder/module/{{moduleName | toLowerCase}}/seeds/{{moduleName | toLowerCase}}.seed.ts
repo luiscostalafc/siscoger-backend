@@ -1,9 +1,9 @@
-import { Movimento } from 'src/modules/movimento/entity/movimento.entity';
-import { Seeder, Factory } from 'typeorm-seeding'
+// import { {{moduleName | toCamelCase}} } from '../entity/{{moduleName | toLowerCase}}.entity';
+// import { Seeder, Factory } from 'typeorm-seeding'
 
-export default class CreateMovimentos implements Seeder {
-  public async run(factory: Factory): Promise<void> {
+// export default class Create{{moduleName | toCamelCase}}s implements Seeder {
+//   public async run(factory: Factory): Promise<void> {
     
-    await factory(Movimento)().createMany(10)
-  }
-}
+//     await factory({{moduleName | toCamelCase}})().createMany(10)
+//   }
+// }
