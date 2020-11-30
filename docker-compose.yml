@@ -17,7 +17,7 @@ services:
     depends_on:
       - postgres
       # - redis
-      # - mongo
+      - mongo
     command: npm run start:dev
 
   postgres:
@@ -45,15 +45,15 @@ services:
     depends_on:
       - postgres
 
-  # mongo:
-  #   container_name: siscoger_mongo
-  #   image: mongo
-  #     networks:
-  #     - webnet
-  #   volumes:
-  #     - ./.docker/mongo:/data/db
-  #   ports:
-  #     - "${MONGO_PORT}:27017"
+  mongo:
+    container_name: siscoger_mongo
+    image: mongo
+    networks:
+      - webnet
+    volumes:
+      - ./.docker/mongo:/data/db
+    ports:
+      - "${MONGO_PORT}:27017"
 
   # redis:
   #   container_name: siscoger_redis
