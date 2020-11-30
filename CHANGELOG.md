@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.24.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.23.0...v0.24.0) (2020-11-30)
+
+
+### Features
+
+* add upload module ([290c087](https://github.com/EmersonBraun/siscoger-backend-v2/commit/290c08737519fecf810754faa707a7dd883cf40a))
+
 ## [0.23.0](https://github.com/EmersonBraun/siscoger-backend-v2/compare/v0.22.0...v0.23.0) (2020-11-24)
 
 
