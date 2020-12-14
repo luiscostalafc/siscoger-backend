@@ -25,7 +25,7 @@ import { uploadModule } from './modules/upload/upload.module';
   imports: [
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot(typeOrmOptions),
-    MongooseModule.forRoot('mongodb://localhost:27017/siscoger'),
+    MongooseModule.forRoot('mongodb://localhost:27017/' || process.env.DB_HOST_MONGO),
     AdlModule,
     AndamentoModule,
     AndamentocogerModule,
